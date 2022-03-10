@@ -1,0 +1,37 @@
+.clock-wrapper {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+}
+
+.second {
+  margin: auto;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
+
+.row {
+  display: flex;
+  margin-top: 8px;
+}
+
+.square {
+  height: 50px;
+  width: 50px;
+  border: 1px solid black;
+}
+
+.orange-background {
+  background: orange;
+}
+
+.red-background {
+  background: red;
+}
+
+.time {
+  margin-top: 8px;
+  text-align: center;
+}
