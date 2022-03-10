@@ -7,7 +7,7 @@ import { map, Observable, timer } from 'rxjs';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  public $time: Observable<Date> = timer(0, 1000).pipe(map(() => new Date()));
+  $time: Observable<Date> = timer(0, 1000).pipe(map(() => new Date()));
   fiveHourRowElements = new Array(4).fill(null);
   singleHourRowElements = new Array(4).fill(null);
   fiveMinuteRowElements = new Array(11).fill(null);
