@@ -2,33 +2,33 @@
   <div class="second" [ngClass]="{ 'orange-background': inkCircle }"></div>
   <div class="five-hours row">
     <div
-      *ngFor="let row1 of row1Elements; let i = index"
+      *ngFor="let element of fiveHourRowElements; let i = index"
       class="square"
-      [ngClass]="{ 'red-background': inkRow1 > i }"
+      [ngClass]="{ 'red-background': inkFiveHourRow > i }"
     ></div>
   </div>
   <div class="single-hours row">
     <div
-      *ngFor="let row2 of row2Elements; let i = index"
+      *ngFor="let element of singleHourRowElements; let i = index"
       class="square"
-      [ngClass]="{ 'red-background': inkRow2 > i }"
+      [ngClass]="{ 'red-background': inkSingleHourRow > i }"
     ></div>
   </div>
   <div class="one-minutes row">
     <div
-      *ngFor="let row3 of row3Elements; let i = index"
+      *ngFor="let element of fiveMinuteRowElements; let i = index"
       class="square"
       [ngClass]="{
-        'orange-background': inkRow3 > i,
-        'red-background': !((i + 1) % 3) && inkRow3 > i
+        'orange-background': inkFiveMinuteRow > i,
+        'red-background': isQuarterHourMark(i)
       }"
     ></div>
   </div>
   <div class="seconds row">
     <div
-      *ngFor="let row4 of row4Elements; let i = index"
+      *ngFor="let element of singleMinuteRowElements; let i = index"
       class="square"
-      [ngClass]="{ 'orange-background': inkRow4 > i }"
+      [ngClass]="{ 'orange-background': inkSingleMinuteRow > i }"
     ></div>
   </div>
   <div class="time">{{ $time | async | date: 'H:mm:ss' }}</div>
